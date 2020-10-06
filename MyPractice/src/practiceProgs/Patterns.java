@@ -1,6 +1,6 @@
 package practiceProgs;
 
-public class Pattern {
+public class Patterns {
 
 	// https://www.baeldung.com/java-printstream-printf
 
@@ -65,7 +65,7 @@ public class Pattern {
 
 	static void printPyramid(int noOfRows) {
 		
-		// 2)
+		// 3)
 				//    *
 				//   * *
 				//  * * *
@@ -85,7 +85,7 @@ public class Pattern {
 	
 	static void printPyramid2(int noOfRows) {
 		
-		// 2)
+		// 4)
 				//    *
 				//   ***
 				//  *****
@@ -104,14 +104,18 @@ public class Pattern {
 	}
 	
 	static void printRhombus(int noOfRows) {
-		
-		// 2)
-				//    *
-				//   ***
-				//  *****
-				// *******
-				//*********
-		
+
+		// 5)
+//       *
+//      ***
+//	   *****
+//	  *******
+//	 *********
+//	  *******
+//	   *****
+//	    ***
+//	     *
+
 		String c = "*";
 		int noOfCharsperLine = noOfRows;
 
@@ -122,14 +126,15 @@ public class Pattern {
 			noOfCharsperLine++;
 		}
 
-		int count = c.length()-1;
+		String str = c.substring(0, c.length() - 2);
+		noOfCharsperLine = noOfCharsperLine - 1;
+
 		for (int i = 1; i < noOfRows; i++) {
 
-			count = count - 2;
-			noOfCharsperLine = noOfCharsperLine - 1;
-			//System.out.println(noOfCharsperLine);
-			String str = c.substring(0, count);
+			str = str.substring(0, str.length() - 2);
+			noOfCharsperLine--;
 			System.out.printf("%" + noOfCharsperLine + "s\n", str);
+
 		}
 
 	}
