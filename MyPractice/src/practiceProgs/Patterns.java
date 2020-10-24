@@ -38,7 +38,10 @@ public class Patterns {
 		String c = "*";
 		for (int i = 1; i <= noOfRows; i++) {
 
-			System.out.printf("%" + noOfRows + "s\n", c);
+			
+			//System.out.printf("%" + noOfRows + "s\n", c);
+			System.out.printf("%" + ((noOfRows - i) > 0 ? (noOfRows - i) : "") + "s", "");
+			System.out.print(c+"\n");
 			c = c + "*";
 		}
 	}
@@ -73,12 +76,16 @@ public class Patterns {
 				//* * * * *
 		
 		String c = "*";
-		int noOfCharsperLine = noOfRows;
+		//int noOfCharsperLine = noOfRows;
 		for (int i = 1; i <= noOfRows; i++) {
+			
+			
+			System.out.printf("%" + ((noOfRows - i) > 0 ? (noOfRows - i) : "") + "s", "");
+			System.out.print(c+"\n");
 
-			System.out.printf("%" + noOfCharsperLine + "s\n", c);
-			c = c + " *";
-			noOfCharsperLine++;
+			//System.out.printf("%" + noOfCharsperLine + "s\n", c);
+			  c = c + " *";
+			//noOfCharsperLine++;
 		}
 
 	}
@@ -93,12 +100,15 @@ public class Patterns {
 				//*********
 		
 		String c = "*";
-		int noOfCharsperLine = noOfRows;
+		//int noOfCharsperLine = noOfRows;
 		for (int i = 1; i <= noOfRows; i++) {
 
-			System.out.printf("%" + noOfCharsperLine + "s\n", c);
+			System.out.printf("%" + ((noOfRows - i) > 0 ? (noOfRows - i) : "") + "s", "");
+			System.out.print(c+"\n");
+			
+			//System.out.printf("%" + noOfCharsperLine + "s\n", c);
 			c = c + "**";
-			noOfCharsperLine++;
+			//noOfCharsperLine++;
 		}
 
 	}
@@ -139,13 +149,29 @@ public class Patterns {
 
 	}
 	
-	
+	static void printNPattern(int noOfRows) {
+		
+	//	   1
+	//    1 2
+	//   1 2 3
+	//  1 2 3 4
+	// 1 2 3 4 5
+		
+	String str = "";
+	for (int i = 1; i <= noOfRows; i++) {
+
+		str = str + i + " ";
+		System.out.printf("%" + ((noOfRows - i) > 0 ? (noOfRows - i) : "") + "s", "");
+		System.out.print(str);
+		System.out.println();
+	}
+}
 	
 	
 
 	public static void main(String[] args) {
 		int row = 5;
-		printRhombus(row);
+		printUpStairCase(row);
 	}
 
 }
