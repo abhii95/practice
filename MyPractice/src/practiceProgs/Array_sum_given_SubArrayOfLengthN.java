@@ -22,6 +22,7 @@ public class Array_sum_given_SubArrayOfLengthN {
 				if (end > arr.length - 1)
 					break;
 				current_sum = current_sum - arr[start] + arr[end];
+				start++;
 			}
 		}
 
@@ -32,7 +33,7 @@ public class Array_sum_given_SubArrayOfLengthN {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		int[] arr = { 1, 4, 2, 10, 2, 3, 1, 0, 20 };
+		int[] arr = { 1, 0, 4, 2, 10, 2, 3, 1, 0, 20 };
 		int desriredSum = 18;
 		int subArrayLength = 4;
 

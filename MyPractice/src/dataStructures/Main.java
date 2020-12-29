@@ -12,11 +12,9 @@ public class Main {
 		 */
 
 
-		list.add(1);
-		list.add(2);
-		list.add(3);
-		list.add(4);
-		list.add(5);
+		/*
+		 * list.add(1); list.add(2); list.add(3); list.add(4); list.add(5);
+		 */
 		
 		/*
 		 * System.out.println("size of List: " + list.getsize()); list.printList();
@@ -45,11 +43,84 @@ public class Main {
 		 * ": " + list.getElementIndexAt(index));
 		 */
 
-		list.printList();
-
-		list.rotateListRight(2);
-
-		list.printList();
+		/*
+		 * list.printList();
+		 * 
+		 * list.rotateListRight(2);
+		 * 
+		 * list.printList();
+		 */
+		
+		
+		LinkedListStack lls = new LinkedListStack();
+		
+		System.out.print(lls);
+		
+		lls.push(10);
+		System.out.println(lls);
+		lls.push(20);
+		System.out.println(lls);
+		lls.push(30);
+		System.out.println(lls);
+		lls.push(40);
+		System.out.println(lls);
+		lls.push(50);
+		System.out.println(lls);
+		
+		lls.pop();
+		System.out.print(lls);
+		lls.pop();
+		System.out.print(lls);
+		lls.pop();
+		System.out.print(lls);
+		
+		lls.push(70);
+		System.out.print(lls);
+		lls.push(80);
+		System.out.print(lls);
+		
+		/*
+		 * System.out.println(lls); lls.pop(); System.out.println(lls); lls.pop();
+		 * System.out.println(lls); lls.pop(); System.out.println(lls);
+		 * 
+		 */
+		
+		System.out.println();
+		System.out.println();
+		
+		LinkedListQueue llq = new LinkedListQueue();
+		
+		llq.offer(1);
+		System.out.println(llq);
+		llq.offer(2);
+		System.out.println(llq);
+		llq.offer(3);
+		System.out.println(llq);
+		llq.offer(4);
+		System.out.println(llq);
+		llq.offer(5);
+		System.out.println(llq);
+		
+		llq.poll();
+		System.out.println(llq);
+		llq.poll();
+		System.out.println(llq);
+		llq.poll();
+		System.out.println(llq);
+		
+		llq.offer(6);
+		System.out.println(llq);
+		llq.offer(7);
+		System.out.println(llq);
+		
+		llq.poll();
+		System.out.println(llq);
+		
+		
+		
+		
+		
+		
 
 	}
 

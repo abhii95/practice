@@ -2,6 +2,7 @@ package dataStructures;
 
 // Definition for singly-linked list.
 class ListNode {
+
 	int val;
 	ListNode next;
 
@@ -16,9 +17,12 @@ class ListNode {
 		this.val = val;
 		this.next = next;
 	}
+
+	// Queue<E>
 }
 
 class Solution {
+
 	public static ListNode rotateRight(ListNode head, int k) {
 
 		int lsize = 1;

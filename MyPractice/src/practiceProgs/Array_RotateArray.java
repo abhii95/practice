@@ -5,7 +5,10 @@ public class Array_RotateArray {
 	static int[] rotateArrayRIGHTbyN(int[] arr, int noOfRotations) {
 
 		int length = arr.length;
-		noOfRotations = noOfRotations % length;
+		int noOfRotationsRight = noOfRotations;
+		int noOfRotationsLeft = length-noOfRotations;
+		
+		noOfRotations = noOfRotationsRight % length;
 
 		int[] rotated_arr = new int[length];
 		
@@ -34,7 +37,7 @@ public class Array_RotateArray {
 	public static void main(String[] args) {
 
 		int[] arr = { 1,2,3,4,5,6,7};
-		int no_of_rotations = 3;
+		int no_of_rotations = 2;
 		
 		
 		for(int i : rotateArrayRIGHTbyN(arr,no_of_rotations)) {

@@ -23,6 +23,7 @@ public class Array_sum_max_SubArrayOfLengthN {
 			if (end > arr.length - 1)
 				break;
 			current_sum = current_sum - arr[start] + arr[end];
+			start++;
 		}
 
 		return end - 1;

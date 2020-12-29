@@ -5,7 +5,7 @@ public class Array_longSubArrayOfSumS {
 	static int[] longSubArray(int[] arr, int desiredSum) {
 
 		int i = 0;
-		int j = 0;
+		int j = i;
 		int sum = arr[i];
 
 		int subArraylen = 0;
@@ -39,7 +39,6 @@ public class Array_longSubArrayOfSumS {
 				j = i;
 				sum = arr[i];
 			}
-
 		}
 
 		int[] narr = new int[subArraylen];
