@@ -46,7 +46,7 @@ public class VowelsInEachWordOfString {
 
 		Set<Map.Entry<Integer, Integer>> entries = hmap.entrySet();
 
-		for (Entry entry : entries) {
+		for (Entry<Integer, Integer> entry : entries) {
 
 			int ch = (int) entry.getKey();
 			int val = (int) entry.getValue();

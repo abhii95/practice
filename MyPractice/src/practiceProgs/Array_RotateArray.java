@@ -2,23 +2,24 @@ package practiceProgs;
 
 public class Array_RotateArray {
 
-	static int[] rotateArrayRIGHTbyN(int[] arr, int noOfRotations) {
+	static int[] rotateArrayRIGHTbyN(int[] arr, int noOfRotations, String direction) {
 
 		int length = arr.length;
 		int noOfRotationsRight = noOfRotations;
-		int noOfRotationsLeft = length-noOfRotations;
-		
-		noOfRotations = noOfRotationsRight % length;
+		int noOfRotationsLeft = length - noOfRotations;
+
+		if (direction.equalsIgnoreCase("right"))
+			noOfRotations = noOfRotationsRight % length;
+		else
+			noOfRotations = noOfRotationsLeft % length;
 
 		int[] rotated_arr = new int[length];
-		
-		
-		/*  0  1  2  3  4   5  6  7
-		 * {2, 0,-1, 4 ,2 ,-6 ,3 ,0} => rot = 2
-		 * i =0 ; r_index = 2 ; rotated_array[2] = -1;
-		 * i =1 ; r_index = 3 ; rotated_array[3] =  4;
-		 * i =5 ; r_index = 7 ; rotated_array[1] =  5;
-		 * i =6 ; r_index = 8 ; rotated_array[2] =  0;
+
+		/*
+		 * 0 1 2 3 4 5 6 7 {2, 0,-1, 4 ,2 ,-6 ,3 ,0} => rot = 2 i =0 ; r_index = 2 ;
+		 * rotated_array[2] = -1; i =1 ; r_index = 3 ; rotated_array[3] = 4; i =5 ;
+		 * r_index = 7 ; rotated_array[1] = 5; i =6 ; r_index = 8 ; rotated_array[2] =
+		 * 0;
 		 * 
 		 */
 
@@ -29,24 +30,22 @@ public class Array_RotateArray {
 			rotated_arr[r_index] = arr[i];
 
 		}
-		
+
 		return rotated_arr;
 
 	}
 
 	public static void main(String[] args) {
 
-		int[] arr = { 1,2,3,4,5,6,7};
+		int[] arr = { 1, 2, 3, 4, 5, 6, 7 };
 		int no_of_rotations = 2;
-		
-		
-		for(int i : rotateArrayRIGHTbyN(arr,no_of_rotations)) {
-			
-			System.out.print(i+" ");
-			
+
+		for (int i : rotateArrayRIGHTbyN(arr, no_of_rotations, "right")) {
+
+			System.out.print(i + " ");
+
 		}
 
-		
 	}
 
 }
