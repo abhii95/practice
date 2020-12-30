@@ -32,7 +32,6 @@ public class ReverseStringPreservingSpace {
 				strArray[endPointer] = temp;
 				startPointer++;
 				endPointer--;
-
 			}
 		}
 

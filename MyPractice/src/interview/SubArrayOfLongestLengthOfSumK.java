@@ -4,7 +4,7 @@ public class SubArrayOfLongestLengthOfSumK {
 
 	public static void main(String[] args) {
 
-		int[] arr = { 1, 2, 3, 4, 5, 0, 0, 0, 0, 6, 7, 8, 9, 10 };
+		int[] arr = { 1, 2, 3, 4, 5, 0, 0, 0, 0, 1, 1, 1, 3, 4, 5, 0, 0, 0, 0, 6, 7, 8, 9, 10 };
 		int desiredSum = 15;
 		longArray(arr, desiredSum);
 		// -> 0-7
@@ -22,31 +22,36 @@ public class SubArrayOfLongestLengthOfSumK {
 		int eIndex = 0;
 		int len = 0;
 
-		while (rightpointer < arr.length) {
+		for (;;) {
 
 			if (currentSum == desiredSum) {
 				noOfKsumSubArraysCount++;
-				if (len < rightpointer - leftpointer) {
+				if (rightpointer - leftpointer > len) {
 					sIndex = leftpointer;
 					eIndex = rightpointer;
 					len = eIndex - sIndex;
 				}
-				rightpointer++;
+				System.out.printf("subArray %d found between indexes %d and %d\n", noOfKsumSubArraysCount, leftpointer,
+						rightpointer);
 
-			} else if (currentSum > desiredSum && leftpointer < rightpointer) {
-				leftpointer++;
+			} else if (currentSum > desiredSum) {
+
 				currentSum = currentSum - arr[leftpointer];
+				leftpointer++;
+				continue;
 			}
 
-			if (currentSum < desiredSum) {
-				rightpointer++;
+			rightpointer++;
+			if (rightpointer < arr.length)
 				currentSum = currentSum + arr[rightpointer];
-			}
+			else
+				break;
 
 		}
 
-		System.out.printf("Total no of subArrays of sum %d is %d \nLong SubArray -> StartIndex: %d & EndIndex: %d",
-				desiredSum, noOfKsumSubArraysCount, sIndex, eIndex);
+		System.out.printf(
+				"\nTotal no of subArrays of sum %d are %d \n\nLong SubArray of length %d -> StartIndex: %d & EndIndex: %d",
+				desiredSum, noOfKsumSubArraysCount, len, sIndex, eIndex);
 	}
 
 }
