@@ -26,7 +26,7 @@ public class SubArrayOfLongestLengthOfSumK {
 
 			if (currentSum == desiredSum) {
 				noOfKsumSubArraysCount++;
-				if (rightpointer - leftpointer > len) {
+				if (rightpointer - leftpointer >= len) {
 					sIndex = leftpointer;
 					eIndex = rightpointer;
 					len = eIndex - sIndex;

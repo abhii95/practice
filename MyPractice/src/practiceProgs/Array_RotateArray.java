@@ -5,13 +5,11 @@ public class Array_RotateArray {
 	static int[] rotateArrayRIGHTbyN(int[] arr, int noOfRotations, String direction) {
 
 		int length = arr.length;
-		int noOfRotationsRight = noOfRotations;
-		int noOfRotationsLeft = length - noOfRotations;
+		noOfRotations = noOfRotations % length;
 
-		if (direction.equalsIgnoreCase("right"))
-			noOfRotations = noOfRotationsRight % length;
-		else
-			noOfRotations = noOfRotationsLeft % length;
+		// If left
+		if (direction.equalsIgnoreCase("left"))
+			noOfRotations = length - noOfRotations;
 
 		int[] rotated_arr = new int[length];
 

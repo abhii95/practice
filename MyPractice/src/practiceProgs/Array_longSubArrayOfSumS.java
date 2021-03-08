@@ -15,6 +15,29 @@ public class Array_longSubArrayOfSumS {
 		/*
 		 * Input : arr[] = { 10, 5, 2, 7, 1, 9 }, k = 15
 		 */
+		
+//		while (i <= j && j < arr.length - 1) {
+//
+//			if (sum == desiredSum) {
+//
+//				currentlen = j - i + 1;
+//				if (currentlen > subArraylen) {
+//					subArraylen = currentlen;
+//					stIndex = i;
+//				}
+//			}
+//
+//			else if (sum > desiredSum) {
+//
+//				sum = sum - arr[i];
+//				i++;
+//				continue;
+//			}
+//
+//			j++;
+//			sum = sum + arr[j];
+//
+//		}
 
 		for (;;) {
 

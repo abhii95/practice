@@ -22,14 +22,15 @@ public class ReverseStringPreservingSpace {
 			if (strArray[startPointer] == ' ')
 				startPointer++;
 
-			if (strArray[endPointer] == ' ')
+			else if (strArray[endPointer] == ' ')
 				endPointer--;
 
-			if (!(strArray[startPointer] == ' ' && strArray[endPointer] == ' ')) {
-
+			else {
+				// swap
 				char temp = strArray[startPointer];
 				strArray[startPointer] = strArray[endPointer];
 				strArray[endPointer] = temp;
+				//
 				startPointer++;
 				endPointer--;
 			}

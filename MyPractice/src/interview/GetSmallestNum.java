@@ -24,9 +24,6 @@ public class GetSmallestNum {
 			sum = sum + (num % 10);
 			num = num / 10;
 		}
-
 		return sum;
-
 	}
-
 }

@@ -28,4 +28,9 @@ public class Parent {
 		System.out.println("ms() in parent class");
 	}
 
+	public static void main(String[] args) {
+		
+		
+	}
+
 }

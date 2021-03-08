@@ -9,7 +9,6 @@ public class SubArrayOfMaxSum {
 		int[] arr2 = subArrayOfMaxSum(arr);
 		System.out.println("Max sum: " + arr2[2]);
 		System.out.printf("SubArray StartIndex: %d EndIndex: %d ", arr[0], arr[1]);
-
 	}
 
 	// kadanaes Algorithm

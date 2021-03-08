@@ -31,13 +31,12 @@ public class SubArrayOfSumK {
 
 			frequencyMap.put(cumulativeSum, frequencyMap.getOrDefault(cumulativeSum, 0) + 1);
 
+			// To check whether any sub array exists
 			if (frequencyMap.containsKey(cumulativeSum - desiredNo)) {
 
 				subArrayCount = subArrayCount + frequencyMap.get(cumulativeSum - desiredNo);
 			}
-
 		}
-
 		System.out.println(subArrayCount);
 	}
 }

@@ -110,7 +110,6 @@ public class Patterns {
 			c = c + "**";
 			//noOfCharsperLine++;
 		}
-
 	}
 	
 	static void printRhombus(int noOfRows) {

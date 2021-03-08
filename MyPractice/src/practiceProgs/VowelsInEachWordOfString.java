@@ -7,12 +7,42 @@ import java.util.Set;
 
 public class VowelsInEachWordOfString {
 
+	public static void main(String[] args) {
+
+		String str = "Adam and Eve      are right   below the Apple tree ";
+		countVowelsInString2(str);
+	}
+
 	static void printNoOfVowelsInEachWordOfSentence(String str) {
 
 		String[] strArray = str.split("\\s+");
 		for (String subStr : strArray) {
 			System.out.println(subStr + "(" + countVowelsInString(subStr) + ")");
 		}
+	}
+
+	public static void countVowelsInString2(String str) {
+
+		String word = "";
+		int wordVowelCount = 0;
+		int vowelCount = 0;
+
+		for (int i = 0; i < str.length(); i++) {
+
+			char ch = str.toLowerCase().charAt(i);
+			if (ch == ' ' && wordVowelCount > 0) {
+				System.out.printf("Vowels count in %s : %d \n", word, wordVowelCount);
+				vowelCount = vowelCount + wordVowelCount;
+				word = "";
+				wordVowelCount = 0;
+			} else {
+				word = word + ch;
+				if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u')
+					wordVowelCount++;
+			}
+		}
+
+		System.out.printf("Vowels count given String is : %d", vowelCount);
 	}
 
 	public static int countVowelsInString(String str) {
@@ -54,13 +84,6 @@ public class VowelsInEachWordOfString {
 			System.out.println((char) ch + " " + val);
 
 		}
-
-	}
-
-	public static void main(String[] args) {
-
-		String str = "Adam and Eve      are right   below the Apple tree ";
-		printEachVowelCountInString(str);
 	}
 
 }
